@@ -1,14 +1,14 @@
 import java.util.*;
-class Sanju
+class Consonet
 {
     public static void main(String arg[])
     {
-        Scanner sr=new Scanner(System.in);
-        char n;
+        Scanner s=new Scanner(System.in);
+        char ch;
         System.out.print("Enter String:");
-        n=sr.nextLine().charAt(0);
+        ch=s.nextLine().charAt(0);
 
-        switch(n)
+        switch(ch)
         {
             case 'A':
             case 'E':
