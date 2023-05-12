@@ -24,7 +24,7 @@ class Main
             System.out.println(b);
         }else if(b>c)
         {
-            System.out.println(b);1
+            System.out.println(b);  
             
         }else if(c>d)
         {
@@ -34,4 +34,4 @@ class Main
             System.out.println(d);
         }
     }
-}
+}`  
