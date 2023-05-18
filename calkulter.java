@@ -39,6 +39,9 @@ class Sanjusingh
             result=num1/num2;
             System.out.println("Div="+result);
             break;
+            default:
+            System.out.println("plese enter   ");
+            break;
         }
 
 
