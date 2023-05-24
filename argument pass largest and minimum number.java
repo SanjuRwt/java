@@ -12,7 +12,7 @@ class Argument
         b=s.nextInt();
 
         Largest(a,b);
-       int small= Minimum(a,b);
+       int small= Minimum(a,b);                
         System.out.println("Smallest"+small);
     }static void Largest(int x,int y)
     {
