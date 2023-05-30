@@ -54,4 +54,4 @@ class StudentManjement {
         this.name = name;
         this.rollNumber = rollNumber;
     }
-}
+} 

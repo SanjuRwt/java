@@ -6,13 +6,12 @@ class VV
         int y=tmp(3,4,6);
         System.out.println(x+y);
     }
-    static int tmp(int...x)
+static int tmp(int...x)
     {
         int t=0;
         for(int i:x)
         {
           t=t+i;
-
         }
         return t;
     }

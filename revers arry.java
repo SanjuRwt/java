@@ -7,7 +7,7 @@ class Rcb
         int arr[];
         int i,e=0,o=0,sum=0,avg=0;
 
-         arr[]=new int arr[10];
+         arr=new int arr[10];
 
         for(i=0;i<=9;i++)
         {
