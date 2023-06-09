@@ -11,6 +11,6 @@ class Areaofcircle
         r=s.nextInt();
 
         Area=PI*r*r;
-        System.out.println("Area of Circle="+Area);
+        System.out.println("Area of =Circle="+Area);
     }
 }
