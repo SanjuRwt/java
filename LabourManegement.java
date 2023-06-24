@@ -1,17 +1,20 @@
 import java.util.ArrayList;
 import java.util.Scanner;
- class WagesManegement 
+ class Labourmanegenmnt 
 {
     public static void main(String arr[])
     {
         Scanner ob=new Scanner(System.in);
         int choice;
         ArrayList<WagesManegements>wages=new ArrayList<WagesManegements>();
+        
+        ArrayList<LabourManegemnet>Labour=new ArrayList<LabourManegemnet>();
         do{
             System.out.println("press 0 to exit");
             System.out.println("press 1 to Add Wages");
-            System.out.println("press 2 to Show ALL Wages List");
-            System.out.println("press 3 to 1 Month Price List All Wages ");
+            System.out.println("press 2 to Show Artisan list");
+            System.out.println("press 3 to Show Labour list");
+            System.out.println("press 4 to 1 Month Price List All Wages ");
 
             System.out.println("Enter your choice");
             choice=ob.nextInt();
@@ -32,22 +35,20 @@ import java.util.Scanner;
                     case 1:
                     System.out.println(" Artisan Price Start 800 Pay");
                     String name;
-                    int perdayincom;
+                    int perdayincom=800;
                     System.out.println("Enter Your Name");
                     name=ob.next();
-                    System.out.println("Enter Your PerDayIncom");
-                    perdayincom=ob.nextInt();
+                    
                     wages.add(new WagesManegements(name,perdayincom));
                     break;
                     case 2:
                     System.out.println("Labour Price Start 500 Pay"); 
-                    String labourname;
-                    int Perdayincom;
+                    String names;
+                    int tankha=500;
                     System.out.println("Enter Your Name");
-                    labourname=ob.next();
-                    System.out.println("Enter Your PerDayIncom");
-                    Perdayincom=ob.nextInt();
-                    wages.add(new WagesManegements(labourname,Perdayincom));
+                    names=ob.next();
+                    
+                    Labour.add(new LabourManegemnet(names,tankha));
                     break;
                 }
                 break;
@@ -58,14 +59,30 @@ import java.util.Scanner;
                     System.out.println(WagesManegementsob.name+" \t "+WagesManegementsob.perdayincom);
                 }
                 break;
-                case 3:
-                System.out.println("----------price-----------");
+                
+                 case 3:
+                System.out.println("-----------------------ALL Labour LIST-------------------------------");
+                System.out.println("Name \t Perdayincom");
+                for(LabourManegemnet LabourManegemnetob : Labour){
+                    System.out.println(LabourManegemnetob.names+" \t "+LabourManegemnetob.tankha);
+                }
+                break;
+                case 4:
+                System.out.println("-----------------------ALL Wages LIST-------------------------------");
+                System.out.println("----------price of Artisan-----------");
+                System.out.println("Name \t Perdayincom");
+                int toatalpricewages;
+                for(WagesManegements WagesManegementsob : wages){
+                    toatalpricewages =800*28;
+                    System.out.println(WagesManegementsob.name+" \t "+WagesManegementsob.perdayincom+"\t"+toatalpricewages);
+                }
+                System.out.println("----------price of Labour-----------");
                 int toatalprice;
                 System.out.println("Name \t Rate \t totalprice");
-                for(WagesManegements WagesManegementsob:wages)
+                for(LabourManegemnet LabourManegemnetob:Labour)
                 {
                  toatalprice=500*28;
-                 System.out.println(WagesManegementsob.name+" \t "+WagesManegementsob.perdayincom+"\t"+toatalprice);
+                 System.out.println(LabourManegemnetob.names+" \t "+LabourManegemnetob.tankha+"\t"+toatalprice);
                 }
             }
             System.out.println("------------------------------");
@@ -75,10 +92,19 @@ import java.util.Scanner;
 class WagesManegements
 {
     public String name;
-    public int perdayincom;
-    WagesManegements(String name,int perdayincom){
+    public Integer perdayincom;
+    public WagesManegements(String name,Integer perdayincom){
     this.name=name;
     this.perdayincom=perdayincom;
+    }
+}
+class LabourManegemnet
+{
+    public String names;
+    public Integer tankha;
+    public LabourManegemnet(String names,Integer tankha){
+    this.names=names;
+    this.tankha=tankha;
     }
 }
 
